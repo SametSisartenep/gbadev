@@ -1,7 +1,7 @@
 #include "dat.h"
 #include "regs.h"
 
-uint *ioram = (uint*)IORAM;
+ushort *ioram = (ushort*)IORAM;
 ushort *vram = (ushort*)VRAM;
 
 Point
@@ -33,7 +33,7 @@ main()
 {
 	int i, c;
 
-	*ioram = 0x0403;
+	ioram[DISPCNT] = BGMODE3|DISPBG2;
 	for(i = 0; i < SCRH; i++){
 		c = 31*i/SCRH;
 		drawpixel(Pt(i,i), rgb(c,c,c));
