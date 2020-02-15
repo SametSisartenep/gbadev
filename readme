@@ -1,9 +1,9 @@
 Install devkitpro's devkitARM, the devkitarm-rules and devkitarm-crtls
-files, and set DEVKITPRO to the path where you installed it.
+files, and set up the environment variables DEVKITARM and PATH properly.
 After that, arm-none-eabi* should resolve to the tools in this kit
 with the proper files in place, not the one in the system.
 
 If all goes well:
-	make && vba *.gba
+	% make && vba *.gba
 
 Have fun!
